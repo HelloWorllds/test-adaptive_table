@@ -1,0 +1,589 @@
+*, *:before, *:after
+	box-sizing: border-box
+	outline: none
+
+*:focus, *:active
+	outline: none
+
+body
+	position: relative
+	width: 100%
+	height: 100vh
+	max-height: 100%
+	margin: 0
+	font-family: 'OpenSans-Regular'
+	font-size: 14px
+	line-height: 14px
+	color: $txt-color
+	overflow-x: hidden
+
+.clearfix
+	&:before,
+	&:after
+		display: table
+		content: ''
+	&:after
+		clear: both
+
+.top-panel
+	display: flex
+	align-items: stretch
+	width: 100%
+	height: 60px
+	border-bottom: 1px solid $border-color
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.4)
+
+.logo
+	display: flex
+	align-items: center
+	width: 107px
+	padding-left: 7px
+	border-right: 1px solid $border-color
+	img
+		width: auto
+		max-width: 40px
+		height: auto
+		max-height: 40px
+		object-fit: contain
+
+.active-tab
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 190px
+	border-right: 1px solid $border-color
+	.icon-tachometer
+		margin-right: 10px
+		font-size: 22px
+		line-height: 22px
+
+.active-tab__container
+	display: flex
+	flex-direction: column
+
+.active-tab__name
+	display: block
+	margin-bottom: 3px
+	font-family: 'OpenSans-SemiBold'
+	font-size: 14px
+	line-height: 14px
+
+.active-tab__descr
+	font-family: 'OpenSans-Light'
+	font-size: 12px
+	line-height: 12px
+
+.user-info
+	display: flex
+	width: auto
+	margin-left: auto
+
+.user-info__balance
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 130px
+	border-left: 1px solid $border-color
+	border-right: 1px solid $border-color
+	font-family: 'OpenSans-SemiBold'
+	text-transform: uppercase
+
+.user-info__balance-header
+	margin-bottom: 4px
+	font-size: 14px
+	line-height: 14px
+
+.user-info__balance-value
+	font-size: 16px
+	line-height: 16px
+
+.user-info__user
+	display: flex
+	justify-content: center
+	align-items: center
+	border-right: 1px solid $border-color
+
+.user-info__user-label
+	display: flex
+	align-items: stretch
+	width: 140px
+	height: 30px
+	margin: 0 15px
+	border: 1px solid $user-border-color
+	border-radius: 3px
+	background-color: $user-bg-color
+
+.user-info__user-login
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	width: 100%
+	font-size: 12px
+	text-transform: lowercase
+	color: $user-txt-white-color
+	.icon-heart
+		margin-right: 6px
+		font-size: 15px
+		color: $user-icon-color
+
+.user-info__user-group
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	text-align: center
+	width: 100%
+	margin-left: auto
+	background-color: $user-group-bg-color
+	font-size: 12px
+	color: $user-txt-blue-color
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		top: 50%
+		left: 0
+		width: 0
+		height: 0
+		border: 6px solid transparent
+		border-right: 6px solid $user-group-bg-color
+		transform: translate(-100%, -50%)
+
+.user-info__logout
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 0 15px
+
+.user-info__logout-btn
+	width: 120px
+	height: 30px
+	padding: 0
+	border: 2px solid $logout-btn-color
+	border-radius: 3px
+	background-color: transparent
+	font-size: 12px
+	line-height: 29px
+	text-transform: capitalize
+	color: $logout-btn-color
+	cursor: pointer
+	transition: all 0.3s
+	span
+		margin-left: 10px
+		font-size: 14px
+	&:hover
+		background-color: $logout-btn-color
+		color: $user-txt-white-color
+		transition: all 0.3s
+
+.wrapper
+	display: flex
+	align-items: stretch
+	width: 100%
+	height: 100%
+
+.sidebar
+	display: flex
+	flex-direction: column
+	width: 107px
+	padding-right: 25px
+	padding-top: 10px
+	border-right: 1px solid $border-color
+
+.sidebar__tabs
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: auto
+
+.sidebar__tab-users,
+.sidebar__tab-reports,
+.sidebar__tab-help,
+.sidebar__tab-structure
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 80px
+	height: 60px
+	margin-left: -1px
+	border: 1px solid $border-color
+	font-family: 'OpenSans-SemiBold'
+	font-size: 14px
+	line-height: 14px
+	transition: all 0.3s
+	cursor: pointer
+	&:hover
+		background-color: #000
+		color: #fff
+		transition: all 0.3s
+	span
+		margin-bottom: 7px
+		font-size: 26px
+		line-height: 26px
+
+.sidebar__tab-users,
+.sidebar__tab-reports,
+.sidebar__tab-help
+	margin-top: -1px
+
+.container
+	display: flex
+	flex-direction: column
+	width: calc(100% - 107px)
+	height: 100%
+	padding: 10px 25px
+
+.filters
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: auto
+	margin-bottom: 10px
+	padding: 25px 10px 10px
+	border: 1px solid $border-color
+	border-radius: 5px
+	box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.4)
+
+.filters__header
+	position: relative
+	width: 100%
+	margin-bottom: 10px
+	font-family: 'OpenSans-SemiBold'
+	font-size: 16px
+	line-height: 16px
+	text-transform: uppercase
+	text-align: center
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		top: 50%
+		width: calc(50% - 70px)
+		height: 1px
+		background-color: $border-color
+		transform: translate(0, -50%)
+	&:before
+		left: 0
+	&:after
+		right: 0
+
+.filters__container
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: auto
+	padding: 10px
+	border: none
+	border-radius: 5px
+	background-color: $filters-bg-color
+
+.filters__container-header
+	margin-bottom: 20px
+	font-family: 'OpenSans-Bold'
+	font-size: 14px
+	line-height: 14px
+	color: $filters-txt-white-color
+
+.filters__period
+	display: flex
+	width: 100%
+	margin-bottom: 10px
+
+.filters__period-start,
+.filters__period-end,
+.filters__period-total
+	display: flex
+	flex-direction: column
+	width: calc(33.333% - 7px)
+
+.filters__period-start,
+.filters__period-end
+	margin-right: 10px
+
+.period__header
+	margin-bottom: 5px
+	font-family: 'OpenSans-SemiBold'
+	font-size: 12px
+	line-height: 12px
+
+.period__container
+	position: relative
+	display: flex
+	align-items: center
+	width: 100%
+	height: 30px
+	padding-left: 10px
+	border: none
+	border-radius: 3px
+	background-color: $filters-period-item-bg
+	input
+		width: 100%
+		height: 100%
+		margin-left: 10px
+		padding: 5px
+		border: none
+		line-height: 30px
+	span
+		opacity: 0.3
+
+.filters__games
+	display: flex
+	flex-direction: column
+	width: 100%
+	margin-bottom: 10px
+
+.filters__games-header
+	margin-bottom: 5px
+	font-family: 'OpenSans-SemiBold'
+	font-size: 12px
+	line-height: 12px
+	text-transform: uppercase
+
+.filters__games-container
+	width: 100%
+	input
+		display: none
+
+.filters__games-selected
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	width: 100%
+	height: auto
+	padding: 4px
+	border-radius: 3px
+	background-color: #fff
+	line-height: 30px
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		top: 50%
+		right: 10px
+		width: 0
+		height: 0
+		border: 5px solid transparent
+		border-top: 5px solid $games-selected-tr-bg
+		transform: translate(0, -25%)
+
+.game-item
+	position: relative
+	display: inline-block
+	width: auto
+	height: 20px
+	margin: 3px 3px 3px 0
+	padding: 0 25px 0 10px
+	border: 1px solid $game-item-border-color
+	border-radius: 3px
+	background-color: $game-item-bg
+	line-height: 16px
+	&:last-child
+		margin-right: 0
+
+.game-item__name
+	font-size: 12px
+	line-height: 12px
+
+.game-item__del
+	position: absolute
+	display: block
+	top: 50%
+	right: 10px
+	width: 10px
+	height: 10px
+	transform: translate(0, -50%)
+	cursor: pointer
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		display: block
+		top: 50%
+		left: 50%
+		width: 8px
+		height: 1px
+		background-color: $game-item-del-color
+		transition: all 0.3s
+	&:before
+		transform: translate(-50%, -50%) rotate(-45deg)
+	&:after
+		transform: translate(-50%, -50%) rotate(45deg)
+	&:hover
+		&:before,
+		&:after
+			background-color: $game-item-del-hover-color
+			transition: all 0.3s
+
+.filters__btn-wrapper
+	display: flex
+	width: 100%
+
+.filters__btn-show
+	width: 70px
+	height: 33px
+	border: none
+	border-radius: 3px
+	background-color: $filters-btn-color
+	text-align: center
+	font-size: 14px
+	line-height: 33px
+	cursor: pointer
+	transition: all 0.3s
+	&:hover
+		background-color: darken($filters-btn-color, 10%)
+		transition: all 0.3s
+
+.table
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: auto
+
+.table__nav
+	padding: 10px
+	border: 1px solid $border-color
+	border-radius: 5px
+
+.table__nav-container
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 40px
+	padding-left: 15px
+	border: 1px solid $border-color
+	border-radius: 3px
+
+.table__nav-header
+	font-size: 12px
+	line-height: 12px
+	span
+		margin-right: 4px
+
+.table__nav-pagin
+	height: 100%
+	margin: 0 5px 0 0
+	padding: 0
+	list-style: none
+	font-size: 0
+
+.table__nav-prev,
+.table__nav-next
+	position: relative
+	display: inline-block
+	width: 36px
+	height: 100%
+	background-color: $table-pagin-li-bg
+	vertical-align: top
+	line-height: 40px
+	cursor: pointer
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		top: 50%
+		left: 50%
+		width: 7px
+		height: 7px
+		border-left: 1px solid $txt-color
+		border-bottom: 1px solid $txt-color
+	&:hover
+		background-color: $table-pagin-li-active-bg
+		transition: all 0.3s
+
+.table__nav-prev:before
+	transform: translate(-50%, -50%) rotate(45deg)
+
+.table__nav-next:before
+	transform: translate(-50%, -50%) rotate(225deg)
+
+.table__nav-page
+	display: inline-block
+	width: 36px
+	height: 100%
+	background-color: $table-pagin-li-bg
+	vertical-align: top
+	font-size: 12px
+	line-height: 40px
+	text-align: center
+	transition: all 0.3s
+	cursor: pointer
+	&:hover
+		background-color: $table-pagin-li-active-bg
+		transition: all 0.3s
+
+.table__nav-page_state_active
+	background-color: $table-pagin-li-active-bg
+	transition: all 0.3s
+
+.table__container
+	width: 100%
+	border: 1px solid $border-color
+	border-top: 3px solid $thead-border-color
+	border-radius: 5px
+	overflow: hidden
+	table
+		width: 100%
+		border-collapse: collapse
+	thead
+		width: 100%
+		border: none
+		background-color: $thead-bg
+		font-family: 'OpenSans-SemiBold'
+		font-size: 14px
+		line-height: 14px
+		tr
+			height: 40px
+		th
+			border: none
+			border-right: 1px solid $border-color
+			&:last-child
+				border-right: none
+	tfoot
+		&:before
+			content: '.'
+			display: block
+			line-height: 1em
+			color: white
+		tr
+			height: 30px
+		td
+			padding: 0 8px
+			border: 1px solid $border-color
+			border-bottom: none
+			text-align: right
+			&:first-child
+				border-left: none
+			&:nth-child(2)
+				text-align: left
+	tbody
+		tr
+			height: 30px
+		td
+			padding: 0 8px
+			border: 1px solid $border-color
+			text-align: right
+			&:nth-child(2)
+				text-align: left
+
+.table__profit,
+.table__payout
+	font-weight: 500
+
+.table__profit_state_red,
+.table__payout_state_red
+	background-color: $table-red-bg
+	color: $table-red-txt-color
+
+.table__profit_state_green,
+.table__payout_state_green
+	background-color: $table-green-bg
+	color: $table-green-txt-color
+
+
+

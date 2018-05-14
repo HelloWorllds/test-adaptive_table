@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test task</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="theme-color" content="#222">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+	<div class="top-panel">
+		<div class="logo">
+			<a href="/">
+				<img src="images/logo.png" alt="logo">
+			</a>
+		</div>
+		<div class="active-tab">
+			<span class="icon-tachometer"></span>
+			<div class="active-tab__container">
+				<span class="active-tab__name">My structure</span>
+				<span class="active-tab__descr">Manage your structure</span>
+			</div>
+		</div>
+		<div class="user-info">
+			<div class="user-info__balance">
+				<div class="user-info__balance-header">Balance</div>
+				<div class="user-info__balance-value">Unlimited</div>
+			</div>
+			<div class="user-info__user">
+				<div class="user-info__user-label">
+					<div class="user-info__user-login">
+						<span class="icon-heart"></span>
+						Neo
+					</div>
+					<div class="user-info__user-group">Admin</div>
+				</div>
+			</div>
+			<div class="user-info__logout">
+				<button type="button" class="user-info__logout-btn">
+					Log out
+					<span class="icon-sign-out"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="sidebar">
+			<div class="sidebar__tabs">
+				<div class="sidebar__tab-structure">
+					<span class="icon-cubes"></span>
+					Structure
+				</div>
+				<div class="sidebar__tab-users">
+					<span class="icon-users"></span>
+					Users
+				</div>
+				<div class="sidebar__tab-reports">
+					<span class="icon-book"></span>
+					Reports
+				</div>
+				<div class="sidebar__tab-help">
+					<span class="icon-question"></span>
+					Help
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="filters">
+				<div class="filters__header">Report filters</div>
+				<div class="filters__container">
+					<div class="filters__container-header">Time Period</div>
+					<div class="filters__period">
+						<div class="filters__period-start">
+							<div class="period__header">Start date</div>
+							<div class="period__container">
+								<span class="icon-calendar"></span>
+								<input type="date" name="start">
+							</div>
+						</div>
+						<div class="filters__period-end">
+							<div class="period__header">End date</div>
+							<div class="period__container">
+								<span class="icon-calendar"></span>
+								<input type="date" name="end">
+							</div>
+						</div>
+						<div class="filters__period-total">
+							<div class="period__header">Filters</div>
+							<div class="period__container">
+								Today
+							</div>
+						</div>
+					</div>
+					<div class="filters__games">
+						<div class="filters__games-header">Games</div>
+						<div class="filters__games-container">
+							<div class="filters__games-selected">
+								<div class="game-item">
+									<span class="game-item__name">Cleo'sGold</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">Crocoman</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">CrazyJelly</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">CrystalSevens</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">Cinderella</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">SafariAdventures</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">MagicalWolf</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">RichyWitchy</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">FruitySevens</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">FairyForest</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">SpaceQuest</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">JewelBlast</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">PrincessOfBirds</span>
+									<span class="game-item__del"></span>
+								</div>
+								<div class="game-item">
+									<span class="game-item__name">JuicySpins</span>
+									<span class="game-item__del"></span>
+								</div>
+							</div>
+							<input type="text" list="games" multiple>
+							<datalist id="games">
+								<option value="JuicySpins">
+								<option value="FairyForest">
+								<option value="RichyWitchy">
+								<option value="MagicalWolf">
+								<option value="FruitySevens">
+								<option value="SafariAdventures">
+								<option value="PrincessOfBirds">
+								<option value="JewelBlast">
+								<option value="Cleo'sGold">
+								<option value="Crocoman">
+								<option value="CrazyJelly">
+								<option value="CrystalSevens">
+								<option value="SpaceQuest">
+								<option value="Cinderella">
+							</datalist>
+						</div>
+					</div>
+					<div class="filters__btn-wrapper">
+						<button type="button" class="filters__btn-show">Show</button>
+					</div>
+				</div>
+			</div>
+			<div class="table">
+				<div class="table__nav">
+					<div class="table__nav-container">
+						<div class="table__nav-header">
+							<span class="icon-book"></span>
+							<span>Pages</span>
+							<span class="icon-hand-o-right"></span>
+						</div>
+						<ul class="table__nav-pagin">
+							<li class="table__nav-prev"></li>
+							<li class="table__nav-page table__nav-page_state_active">1</li>
+							<li class="table__nav-page">2</li>
+							<li class="table__nav-next"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="table__container">
+					<table>
+						<col width="6%">
+						<col width="19%">
+						<col width="12.5%">
+						<col width="12.5%">
+						<col width="12.5%">
+						<col width="12.5%">
+						<col width="12.5%">
+						<col width="12.5%">
+						<thead>
+							<tr>
+								<th>№</th>
+								<th>Name</th>
+								<th>Total bet</th>
+								<th>Total win</th>
+								<th>Bets, amt</th>
+								<th>Avg bet</th>
+								<th>Profit</th>
+								<th>Payout, %</th>
+							</tr>
+						</thead>
+						<tfoot>
+							<tr>
+								<td></td>
+								<td>Total:</td>
+								<td>1,049,857,233.85</td>
+								<td>987,052,140/72</td>
+								<td>1,048,753</td>
+								<td>1,001.05</td>
+								<td class="table__profit table__profit_state_green">62,805,093.13</td>
+								<td class="table__payout table__payout_state_green">94.02</td>
+							</tr>
+						</tfoot>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>JuicySpins</td>
+								<td>4,035,597.75</td>
+								<td>4,249,075.15</td>
+								<td>4,005</td>
+								<td>1,007.64</td>
+								<td class="table__profit table__profit_state_red">-213,477.40</td>
+								<td class="table__payout table__payout_state_red">105.29</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>FairyForest</td>
+								<td>9,061,096.50</td>
+								<td>9,446,513.15</td>
+								<td>4,005</td>
+								<td>2,262.45</td>
+								<td class="table__profit table__profit_state_red">-385,416.75</td>
+								<td class="table__payout table__payout_state_red">104.25</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>RichyWitchy</td>
+								<td>4,981,104.00</td>
+								<td>5,108,194,10</td>
+								<td>4,005</td>
+								<td>1,243.72</td>
+								<td class="table__profit table__profit_state_red">-127,090.10</td>
+								<td class="table__payout table__payout_state_red">102.55</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>MagicalWolf</td>
+								<td>5,892,211.80</td>
+								<td>5,849,925.55</td>
+								<td>4,005</td>
+								<td>1,471.21</td>
+								<td class="table__profit table__profit_state_green">42,286.25</td>
+								<td class="table__payout table__payout_state_green">99.28</td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td>FruitySevens</td>
+								<td>6,255,375.75</td>
+								<td>6,144,293.40</td>
+								<td>4,005</td>
+								<td>1,561.89</td>
+								<td class="table__profit table__profit_state_green">111,082.35</td>
+								<td class="table__payout table__payout_state_green">98.22</td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td>SafariAdventures</td>
+								<td>10,905,912.00</td>
+								<td>10,530,474.90</td>
+								<td>4,005</td>
+								<td>2,723.07</td>
+								<td class="table__profit table__profit_state_green">375,437.10</td>
+								<td class="table__payout table__payout_state_green">96.56</td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>PrincessOfBirds</td>
+								<td>993,329,711.80</td>
+								<td>933,386,038.42</td>
+								<td>1,005.173</td>
+								<td>988.22</td>
+								<td class="table__profit table__profit_state_green">59,943,673.38</td>
+								<td class="table__payout table__payout_state_green">93.97</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>JewelBlast</td>
+								<td>2,934,218.10</td>
+								<td>2,632,160.15</td>
+								<td>5,115</td>
+								<td>573.65</td>
+								<td class="table__profit table__profit_state_green">302,057.95</td>
+								<td class="table__payout table__payout_state_green">89.71</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>Cleo'sGold</td>
+								<td>6,384,384.80</td>
+								<td>5,469,037.50</td>
+								<td>5,116</td>
+								<td>1,247.93</td>
+								<td class="table__profit table__profit_state_green">915,347.30</td>
+								<td class="table__payout table__payout_state_green">85.66</td>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td>Crocoman</td>
+								<td>1,269,273.60</td>
+								<td>947,732.15</td>
+								<td>4,005</td>
+								<td>316.92</td>
+								<td class="table__profit table__profit_state_green">321,541.45</td>
+								<td class="table__payout table__payout_state_green">74.67</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
